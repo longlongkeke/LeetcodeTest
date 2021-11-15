@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class 背包011 {
     public static void MaxValue(int[] v,int[]w,int C,int n){
         int[] dp=new int[C+1];
+
         for(int i=1;i<=n;i++){
 //            for(int j=w[i];j<=C;j++){
 //                dp[j]=Math.max(dp[i-1],dp[j-w[i]]+v[i]);
 //            }
             for(int j=C;j>=w[i];j--){
-                dp[j]=Math.max(dp[i-1],dp[j-w[i]]+v[i]);
+                dp[j]=Math.max(dp[j],dp[j-w[i]]+v[i]);
             }
         }
         System.out.println(dp[C]);

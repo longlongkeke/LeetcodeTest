@@ -25,6 +25,7 @@ public class Testlettcode {
 //        Random rand = new Random();
 //        int i = rand.nextInt(20);
         LinkedList<Integer> list=new LinkedList<>();
+        list.pop();
         list.push(7);
 
 
